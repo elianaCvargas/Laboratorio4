@@ -1,2 +1,22 @@
+
+<h2>{{title}}</h2>
 <router-outlet></router-outlet>
-TEST
+<!-- <input type="{{miTipo}}">  no hacer!-->
+<input [type]= "miTipo" [(ngModel)]="title"> <!--  HACER  [(ngModel)]="title" el corchete y parentesis indica que llegan los datos desde el html y los podemos modificar-->
+<!-- formas de devolverle al  html datos desde el  ts -->
+
+<input type= "button" (click)="mostrarAlert()" value="cambiar"> <!--  HACER (click)="mostrarAlert()" es el modo de traer los datos del ts al  html-->
+<br>
+<h1>Suma</h1>
+<input type="number" [(ngModel)]="miSuma.numero1">
+<input type="number"  [(ngModel)]="miSuma.numero2">
+<input type="button"  (click)="miSuma.sumar()" value="sumar">
+<input type="number" [value]="miSuma.result">
+<br>
+<h1>Login</h1>
+<input type="text" [(ngModel)]="miLogin.usuario" placeholder="Usuario">
+<input type="text"  [(ngModel)]="miLogin.password" placeholder="Password">
+<input type="button"  (click)="miLogin.loggear()" value="Login">
+
+
+{{title}}
