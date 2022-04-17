@@ -13,6 +13,9 @@ import { HomeComponent } from './Page/home/home.component';
 import { PerfilComponent } from './Page/perfil/perfil.component';
 import { MemoTestComponent } from './Page/juegos/memo-test/memo-test.component';
 import { PiedraPapelTijeraComponent } from './Page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
+import { ResumenCarreraComponent } from './Page/perfil/resumen-carrera/resumen-carrera.component';
+import { MenuPerfilComponent } from './Page/perfil/menu-perfil/menu-perfil.component';
+import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/resumen-habilidades.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { PiedraPapelTijeraComponent } from './Page/juegos/piedra-papel-tijera/pi
     HomeComponent,
     PerfilComponent,
     MemoTestComponent,
-    PiedraPapelTijeraComponent
+    PiedraPapelTijeraComponent,
+    ResumenCarreraComponent,
+    MenuPerfilComponent,
+    ResumenHabilidadesComponent
   ],
   imports: [
     BrowserModule,
