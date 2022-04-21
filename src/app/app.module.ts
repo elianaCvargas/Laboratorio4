@@ -16,6 +16,7 @@ import { PiedraPapelTijeraComponent } from './Page/juegos/piedra-papel-tijera/pi
 import { ResumenCarreraComponent } from './Page/perfil/resumen-carrera/resumen-carrera.component';
 import { MenuPerfilComponent } from './Page/perfil/menu-perfil/menu-perfil.component';
 import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/resumen-habilidades.component';
+import { ExperienciaLaboralComponent } from './Page/perfil/experiencia-laboral/experiencia-laboral.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/r
     PiedraPapelTijeraComponent,
     ResumenCarreraComponent,
     MenuPerfilComponent,
-    ResumenHabilidadesComponent
+    ResumenHabilidadesComponent,
+    ExperienciaLaboralComponent
   ],
   imports: [
     BrowserModule,
