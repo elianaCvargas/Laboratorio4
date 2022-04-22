@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BusquedaComponent } from './page/busqueda/busqueda.component';
 import { PeliculaComponent } from './page/pelicula/pelicula.component';
 
 const routes: Routes = [
-  { path: 'pelicula', component: PeliculaComponent},
+  { path: 'busqueda', component: BusquedaComponent},
 ];
 
 @NgModule({
