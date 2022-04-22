@@ -17,6 +17,8 @@ import { ResumenCarreraComponent } from './Page/perfil/resumen-carrera/resumen-c
 import { MenuPerfilComponent } from './Page/perfil/menu-perfil/menu-perfil.component';
 import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/resumen-habilidades.component';
 import { ExperienciaLaboralComponent } from './Page/perfil/experiencia-laboral/experiencia-laboral.component';
+import { JugadorComponent } from './modules/jugador/jugador.component';
+import { MemoTestListadoComponent } from './Page/juegos/memo-test-listado/memo-test-listado.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ExperienciaLaboralComponent } from './Page/perfil/experiencia-laboral/e
     ResumenCarreraComponent,
     MenuPerfilComponent,
     ResumenHabilidadesComponent,
-    ExperienciaLaboralComponent
+    ExperienciaLaboralComponent,
+    JugadorComponent,
+    MemoTestListadoComponent
   ],
   imports: [
     BrowserModule,

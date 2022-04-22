@@ -10,8 +10,12 @@ import { PerfilComponent } from './Page/perfil/perfil.component';
 import { ResumenCarreraComponent } from './Page/perfil/resumen-carrera/resumen-carrera.component';
 import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/resumen-habilidades.component';
 
+
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch : 'full'},  //esto redirige a otro path definido segun el  path que le doy
+  { path: 'inicio', loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)},
+  { path: 'practicas', loadChildren: () => import('./modules/practicas/practicas.module').then(m => m.PracticasModule)},
+
   { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'perfil', component: PerfilComponent,
