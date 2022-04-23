@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pelicula } from '../../entidad/pelicula';
 
 @Component({
   selector: 'app-pelicula',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent implements OnInit {
-
-  constructor() { }
+  @Input() peliculaFromParent: Pelicula | undefined;
+  pelicula: any;
+  constructor() { 
+    this.pelicula = this.peliculaFromParent;
+  }
 
   ngOnInit(): void {
   }
+
+  
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Pelicula } from '../../entidad/pelicula';
 
 @Component({
   selector: 'app-tabla-pelicula',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaPeliculaComponent implements OnInit {
 
-  constructor() { }
+  @Input() peliculasInPeliComponent: Pelicula[] | undefined;
+  @Output() onSelectedPelicula: EventEmitter<Pelicula>;
+  constructor() { 
+    this.onSelectedPelicula = new EventEmitter<Pelicula>();
+  }
 
   ngOnInit(): void {
   }
 
+  mostrarPelicula(pelicula:Pelicula)
+  {
+    this.onSelectedPelicula.emit(pelicula);
+  }
 }

@@ -1,1 +1,30 @@
-<p>tabla-pelicula works!</p>
+<!-- <ul>
+    <li *ngFor="let pelicula of peliculasInPeliComponent">
+        <span>
+            
+        </span>
+
+    </li>
+</ul> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Fecha estreno</th>
+        <th scope="col">Cantidad público</th>
+        <th scope="col">Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pelicula of peliculasInPeliComponent">
+        <td>{{pelicula.nombre}}</td>
+        <td>{{pelicula.tipo}}</td>
+        <td>{{pelicula.fechaEstreno}}</td>
+        <td>{{pelicula.cantidadPublico}}</td>
+        <button type="button" (click)="mostrarPelicula(pelicula)"></button>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
