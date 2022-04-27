@@ -1,1 +1,19 @@
-<p>{{pelicula.nombre}}</p>
+
+<div *ngIf="!pelicula">
+    <p> seleccione un Profesor </p>
+  </div>
+  
+  
+  <div *ngIf="pelicula">
+    <h2>{{pelicula.nombre}} </h2>
+   
+<!--   
+    <div class="card" style="width:200px">
+        <img class="card-img-top" src="/assets/imagenes/presentacion.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{pelicula.legajo}}</h4>
+          <p class="card-text">El Profesor {{pelicula.nombre}} ,{{pelicula.apellido}}</p>
+          <a href="#" class="btn btn-danger">Borrar</a>
+        </div>
+      </div> -->
+  </div>

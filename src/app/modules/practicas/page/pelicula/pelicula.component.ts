@@ -7,8 +7,8 @@ import { Pelicula } from '../../entidad/pelicula';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent implements OnInit {
-  @Input() peliculaFromParent: Pelicula | undefined;
-  pelicula: any;
+  @Input() peliculaFromParent: Pelicula;
+  pelicula: Pelicula;
   constructor() { 
     this.pelicula = this.peliculaFromParent;
   }

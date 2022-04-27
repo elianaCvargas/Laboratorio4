@@ -8,7 +8,7 @@ import { Pelicula } from '../../entidad/pelicula';
 })
 export class BusquedaComponent implements OnInit {
   peliculasFromBusqueda: Pelicula[];
-  peliculaFromEvent: Pelicula | undefined;
+  peliculaDetail: Pelicula;
   constructor() { 
     var peli = new Pelicula();
     peli.nombre = "Zombie land";
@@ -24,6 +24,6 @@ export class BusquedaComponent implements OnInit {
 
   peliculaSelectedDetail(pelicula:Pelicula)
   {
-    this.peliculaFromEvent = pelicula;
+    this.peliculaDetail = pelicula;
   }
 }

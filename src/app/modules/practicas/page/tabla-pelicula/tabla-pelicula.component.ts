@@ -8,7 +8,7 @@ import { Pelicula } from '../../entidad/pelicula';
 })
 export class TablaPeliculaComponent implements OnInit {
 
-  @Input() peliculasInPeliComponent: Pelicula[] | undefined;
+  @Input() peliculasInPeliComponent: Pelicula[];
   @Output() onSelectedPelicula: EventEmitter<Pelicula>;
   constructor() { 
     this.onSelectedPelicula = new EventEmitter<Pelicula>();

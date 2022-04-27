@@ -1,12 +1,10 @@
 .contenedor {
-    height: 90vh;
-    background-image: url('../assets/imagenes/desenfocado.jpg');
-    background-size: 1500px;
-    /* width: 1500px; */
-
+    height: 100vh;
+    background-image: url('../assets/imagenes/bross.jpg');
+    background-size:cover;
   }
 
-  img {
+  /* img {
     max-width: 100%;
     max-height: 100%;
-   }
+   } */
