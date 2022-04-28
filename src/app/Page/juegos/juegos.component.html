@@ -1,6 +1,10 @@
-<!-- <app-tateti></app-tateti> -->
-<p>En esta seccion  me gustaria que aparezcan todos los juegos listados en forma de iconos SIN dejarte entrar en cada uno a  menos que estes loggeado</p>
-<p>Si  le doy  click y no  estoy loggeado, debe llevarme al  login</p>
-<p>Si ya estoy loggeado, debe dejarme entrar al juego seleccionado</p>
+<!-- <div class="row  mx-4 align-items-center"> -->
+    
+    <div class="col-sm-9">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-sm-3">
+        <app-menu-juegos></app-menu-juegos>
+    </div>
+<!-- </div> -->
 
-<router-outlet></router-outlet>

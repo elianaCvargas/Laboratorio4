@@ -20,6 +20,7 @@ import { ExperienciaLaboralComponent } from './Page/perfil/experiencia-laboral/e
 import { JugadorComponent } from './modules/jugador/jugador.component';
 import { MemoTestListadoComponent } from './Page/juegos/memo-test-listado/memo-test-listado.component';
 import { FootComponent } from './Page/foot/foot.component';
+import { MenuJuegosComponent } from './Page/juegos/menu-juegos/menu-juegos.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FootComponent } from './Page/foot/foot.component';
     ExperienciaLaboralComponent,
     JugadorComponent,
     MemoTestListadoComponent,
-    FootComponent
+    FootComponent,
+    MenuJuegosComponent
   ],
   imports: [
     BrowserModule,
