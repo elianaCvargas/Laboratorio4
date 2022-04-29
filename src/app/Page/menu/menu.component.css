@@ -13,6 +13,15 @@ a:hover {
     color: #cac40a;
 }
 
+link:hover{
+    color: #cac40a;
+
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #cac40a;
+}
+
 .login{
     border: #cac40a77;
     border-style:solid;

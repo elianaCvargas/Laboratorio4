@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Page/home/home.component';
 import { JuegosComponent } from './Page/juegos/juegos.component';
+import { MemoTestComponent } from './Page/juegos/memo-test/memo-test.component';
+import { PiedraPapelTijeraComponent } from './Page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
 import { TatetiComponent } from './Page/juegos/tateti/tateti.component';
 import { LoginComponent } from './Page/login/login.component';
 import { NotFoundComponent } from './Page/not-found/not-found.component';
@@ -9,6 +11,7 @@ import { ExperienciaLaboralComponent } from './Page/perfil/experiencia-laboral/e
 import { PerfilComponent } from './Page/perfil/perfil.component';
 import { ResumenCarreraComponent } from './Page/perfil/resumen-carrera/resumen-carrera.component';
 import { ResumenHabilidadesComponent } from './Page/perfil/resumen-habilidades/resumen-habilidades.component';
+import { RegistroComponent } from './Page/registro/registro.component';
 
 
 const routes: Routes = [
@@ -18,6 +21,7 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'registro', component: RegistroComponent},
   { path: 'perfil', component: PerfilComponent,
       children: [
         { path: '', component: ResumenCarreraComponent },
@@ -29,6 +33,8 @@ const routes: Routes = [
   { path: 'juego', component: JuegosComponent, 
       children: [
         { path: 'tateti', component: TatetiComponent },
+        { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
+        { path: 'memo-test', component: MemoTestComponent },
         // { path: '**', component: NotFoundComponent },
       ]},
   { path: '**', component: NotFoundComponent },

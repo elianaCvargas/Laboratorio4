@@ -21,6 +21,7 @@ import { JugadorComponent } from './modules/jugador/jugador.component';
 import { MemoTestListadoComponent } from './Page/juegos/memo-test-listado/memo-test-listado.component';
 import { FootComponent } from './Page/foot/foot.component';
 import { MenuJuegosComponent } from './Page/juegos/menu-juegos/menu-juegos.component';
+import { RegistroComponent } from './Page/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MenuJuegosComponent } from './Page/juegos/menu-juegos/menu-juegos.compo
     JugadorComponent,
     MemoTestListadoComponent,
     FootComponent,
-    MenuJuegosComponent
+    MenuJuegosComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

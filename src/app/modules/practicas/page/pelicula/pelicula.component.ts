@@ -8,12 +8,12 @@ import { Pelicula } from '../../entidad/pelicula';
 })
 export class PeliculaComponent implements OnInit {
   @Input() peliculaFromParent: Pelicula;
-  pelicula: Pelicula;
+
   constructor() { 
-    this.pelicula = this.peliculaFromParent;
   }
 
   ngOnInit(): void {
+    
   }
 
   
