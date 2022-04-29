@@ -12,3 +12,9 @@
 button{
     background-color:rgb(221, 175, 49);
 }
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0bd791;
+    border-color: #0aca1a;
+}

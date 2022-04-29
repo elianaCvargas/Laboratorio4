@@ -1,17 +1,16 @@
 import { Usuario } from "./usuario";
 
 export class Login {
-    usuario:Usuario;
+    email:string;
+    password:string;
 
     loggear():boolean
     {
-        if(this.usuario.email == "carla" && this.usuario.password == "1234")  
+        if(this.email == "carla" && this.password == "1234")  
         {
-            alert("loggeado");  
             return true;
         }
         
-        alert("No se pudo");
         return false;  
     }
 

@@ -1,7 +1,6 @@
 export class Usuario {
-    nombre?:string;
+    nombre:string;
     apllido:string;
     email:string;
     password:string;
-    isLoggeado:boolean;
 }

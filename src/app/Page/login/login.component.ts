@@ -14,21 +14,25 @@ export class LoginComponent implements OnInit {
   email:string;
   password:string;
   constructor(public router: Router) { 
-    // this.usuario =  new Usuario();
     this.login = new Login();
-    this.login.usuario = new Usuario();
-    this.login.usuario.email = this.email;
-    this.login.usuario.password = this.password;
     // localStorage.setItem('dataSource', this.dataSource.length); 
   }
 
   ngOnInit(): void {
-    // var  suu = this.usuario.nombre;
-      // if(localStorage.getItem('usuario-isLoggeado'))
-      // {
-      //     // this.usuario.nombre = localStorage.getItem('usuario-nombre');
-      // }
 
+
+  }
+
+  loggear()
+  {
+    //cambiar por servicio a user auth
+      if(this.login.loggear())
+      {
+       
+        localStorage.setItem("usuario",  JSON.stringify(this.login));
+        var a =JSON.parse(localStorage.getItem('usuario') ?? '');
+        this.router.navigateByUrl('juego');
+      }
   }
 
   redirigir()
