@@ -3,6 +3,7 @@ import { Usuario } from "./usuario";
 export class Login {
     email:string;
     password:string;
+    fecha:string;
 
     loggear():boolean
     {
