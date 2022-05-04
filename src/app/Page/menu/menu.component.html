@@ -15,9 +15,9 @@
         </ul>
         <form class="d-flex">
           <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <a routerLink="login" class="nav-link active login" aria-current="page">Login</a>
-          <a routerLink="login" class="nav-link active login" aria-current="page">Salir</a>
-          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="!usuario">Login</a>
+          <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="usuario" (click)="salir()">Salir</a>
+      
         </form>
       </div>
     </div>

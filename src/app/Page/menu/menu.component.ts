@@ -11,7 +11,15 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.usuario = localStorage.getItem('usuario') != null ? localStorage.getItem('usuario') != null : '';
+    if(localStorage.getItem('usuario') != null)
+    {
+       this.usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+    }
+  }
+
+  salir()
+  {
+      localStorage.removeItem("usuario");
   }
 
 }

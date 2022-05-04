@@ -27,21 +27,22 @@ export class LoginComponent implements OnInit {
   loggear()
   {
     //cambiar por servicio a user auth
-      if(this.login.loggear())
-      {
+
+      // if(this.login.loggear())
+      // {
         var usuario = new Usuario();
 
         this.login.fecha = new Date().toLocaleDateString();
      
         // var a =JSON.parse(localStorage.getItem('usuario') ?? '');
-        this.loginService.guardar(this.login).then(data => {
+        this.loginService.login(this.email, this.password).then(data => {
           //traer usuario
           localStorage.setItem("usuario",  JSON.stringify(usuario));
           this.router.navigateByUrl('juego');
         }).catch(message => {
           console.log(message);
         });
-      }
+      // }
   }
 
   redirigir()
