@@ -15,6 +15,13 @@ button{
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0bd791;
+    background-color: #0bd7cd;
     border-color: #0aca1a;
+}
+
+.crea-cuenta{
+    font-family: cursive;
+    font-style:italic;
+    font-weight: bold;
+    color:rgb(221, 49, 86);
 }

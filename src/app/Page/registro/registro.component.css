@@ -8,3 +8,25 @@
     
     border-right: thick;
 }
+
+.btn-primary:hover {
+    color: #fff;
+    background-color:rgb(221, 175, 49);
+    border-color: #0aca1a;
+}
+
+button{
+    background-color: #0bd7cd;
+}
+
+/* .hide-error{
+    visibility: hidden;
+}
+
+.show-error{
+    visibility: visible;
+} */
+
+.error {
+    color: red;
+}

@@ -27,6 +27,7 @@ import { RegistroComponent } from './Page/registro/registro.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
