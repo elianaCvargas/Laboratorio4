@@ -49,7 +49,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     MemoTestListadoComponent,
     FootComponent,
     MenuJuegosComponent,
-    RegistroComponent
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,

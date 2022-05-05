@@ -52,7 +52,7 @@ message:string;
     }
 
 
-    registroPost(email: string, pass: string): Promise<any> {
+    registroPorAuth(email: string, pass: string): Promise<any> {
       return this.auth
         .createUserWithEmailAndPassword(email, pass)
         .then(res => {

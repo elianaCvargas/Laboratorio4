@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { window } from 'rxjs';
 import { LoginService } from 'src/app/servicios/login.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 import { Login } from 'src/Entidades/tp-juegos/login';
 import { Usuario } from 'src/Entidades/tp-juegos/usuario';
 
@@ -10,13 +12,11 @@ import { Usuario } from 'src/Entidades/tp-juegos/usuario';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // usuario:Usuario;
-  login:Login;
-  email:string;
-  password:string;
-  constructor(public router: Router, private loginService:LoginService) { 
+  login: Login;
+  email: string;
+  password: string;
+  constructor(public router: Router, private loginService: LoginService, private usuarioService: UsuarioService) {
     this.login = new Login();
-    // localStorage.setItem('dataSource', this.dataSource.length); 
   }
 
   ngOnInit(): void {
@@ -24,29 +24,31 @@ export class LoginComponent implements OnInit {
 
   }
 
-  loggear()
-  {
-    //cambiar por servicio a user auth
+  loggear() {
+    var usuario = new Usuario();
 
-      // if(this.login.loggear())
-      // {
-        var usuario = new Usuario();
+    this.login.fecha = new Date().toLocaleDateString();
 
-        this.login.fecha = new Date().toLocaleDateString();
-     
-        // var a =JSON.parse(localStorage.getItem('usuario') ?? '');
-        this.loginService.login(this.email, this.password).then(data => {
-          //traer usuario
-          localStorage.setItem("usuario",  JSON.stringify(usuario));
-          this.router.navigateByUrl('juego');
-        }).catch(message => {
-          console.log(message);
-        });
-      // }
+    this.loginService.login(this.email, this.password).then(data => {
+      this.usuarioService.usuarioGet(this.email)
+        .then(data => {
+          var usuario = new Usuario();
+          usuario.nombre = data[0].nombre;
+          usuario.apellido = data[0].apellido;
+          usuario.email = data[0].email;
+          localStorage.setItem("usuario", JSON.stringify(usuario));
+          this.router.navigate(['juego']).then(() => {
+            location.reload()
+          });
+
+        })
+
+    }).catch(message => {
+      console.log(message);
+    });
   }
 
-  redirigir()
-  {
+  redirigir() {
     this.router.navigateByUrl('juego/tateti');
   }
 

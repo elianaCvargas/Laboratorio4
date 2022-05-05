@@ -1,6 +1,9 @@
 .box-login{
     border-radius: 15px;
-    margin: 10px;
+    margin: 25px;
+    height: 88%;
+    display: flex;
+    align-items: center;
 }
 
 .titulo-utn{

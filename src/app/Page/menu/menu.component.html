@@ -2,11 +2,11 @@
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a routerLink="" class="nav-link active" aria-current="page">Home</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a routerLink="juego" class="nav-link active" aria-current="page">Juegos</a>
+            <a routerLink="juego" class="nav-link active" aria-current="page" *ngIf="usuario">Home</a>
           </li>
           <li class="nav-item">
             <a routerLink="perfil" class="nav-link active">Quién Soy</a>

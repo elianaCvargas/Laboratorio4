@@ -7,7 +7,7 @@ import { Usuario } from 'src/Entidades/tp-juegos/usuario';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  usuario: Usuario;
+  usuario: Usuario | null;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +19,11 @@ export class MenuComponent implements OnInit {
 
   salir()
   {
-      localStorage.removeItem("usuario");
+    setTimeout(() => {
+    }, 3000);
+
+    localStorage.removeItem("usuario");
+    this.usuario = null;
   }
 
 }

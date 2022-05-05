@@ -20,26 +20,10 @@ export class LoginService {
       .signInWithEmailAndPassword(email, pass)
       .then(res => {
         var result = res;
-
         return res;
       })
       .catch((err) => {
-        // switch (err.code) {
-        //   case 'auth/email-already-in-use':
-        //     this.message = 'Ya existe otro usuario con el mail ingresado';
-        //     break;
-        //   case 'auth/invalid-email':
-        //     this.message = 'El formato debe ser: xyx@midominio.com';
-
-        //     break;
-        //   case 'auth/weak-password':
-        //     this.message = 'El password debe contener al menos 6 letras';
-        //     break;
-        //   default:
-        //     this.message = err;
-        //     break;
-        // }
-
+        //armar una alerta si hay  algun error en  la conexion
         return Promise.reject(err);
       });
   }
