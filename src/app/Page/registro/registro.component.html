@@ -1,111 +1,126 @@
+<div class="px-4 py-5 px-md-5 text-center text-lg-start box-login">
+  <div class="container">
+    <div class="row gx-lg-5 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="my-5 display-3 fw-bold ls-tight">
+          Juegos Online <br />
+          <span class="titulo-utn">Universidad Tecnológica Nacional</span>
+          <span class="titulo-utn"> de Buenos Aires</span>
+        </h1>
+        <p style="color: rgb(7, 7, 7)">
+          Esta es una web app a modo de práctica de la cursada en la UTN del año 2022. Laboratorio IV, Primer
+          Cuatrimestre.
+        </p>
+      </div>
 
-    <div class="px-4 py-5 px-md-5 text-center text-lg-start box-login" style="background-color: hsla(0, 0%, 96%, 0.623) ">
-        <div class="container">
-          <div class="row gx-lg-5 align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-              <h1 class="my-5 display-3 fw-bold ls-tight">
-                Juegos Online <br />
-                <span class="titulo-utn">Universidad Tecnológica de Buenos Aires</span>
-              </h1>
-              <p style="color: rgb(7, 7, 7)">
-                Esta es una web app a modo de práctica de la cursada en la UTN del  año 2022. Laboratorio IV, Primer Cuatrimestre.
-              </p>
-            </div>
-    
-            <div class="col-lg-6 mb-5 mb-lg-0">
-              <div class="card">
-                <div class="card-body py-5 px-md-5">
-                  <form>
-                    <div class="d-flex justify-content-center">
-                      <h2 class="registro-txt">
-                        Registro
-                      </h2>
-                    </div>
-                    <!-- 2 column grid layout with text inputs for the first and last names -->
-                    <div class="row">
-                      <div class="col-md-6 ">
-                        <div class="form-outline">
-                          <input type="text" id="form3Example1" class="form-control" [(ngModel)]="nombre" name="nombre"  required minlength="4"  #name="ngModel"/>
-                          <label class="form-label" for="form3Example1">Nombre</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-outline">
-                          <input type="text" id="form3Example2" class="form-control" [(ngModel)]="apellido" name="apellido"  #surname="ngModel" required/>
-                          <label class="form-label" for="form3Example2" >Apellido</label>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Email input -->
-                    <div class="form-outline ">
-                      <input type="email" id="form3Example3" class="form-control"  [(ngModel)]="email" name="email"  #emailInput="ngModel" required/>
-                      <label class="form-label" for="form3Example3" >Email</label>
-                    </div>
-    
-                     <!-- Password input -->
-                    <div class="form-outline ">
-                      <input type="password" id="form3Example4" class="form-control" [(ngModel)]="password" name="password"  #passwordInput="ngModel" required/>
-                      <label class="form-label" for="form3Example4">Password</label>
-                    </div>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card">
+          <div class="card-body py-5 px-md-5">
+            <form [formGroup]="registroFormulario">
+              <div class="d-flex justify-content-center">
+                <h2 class="registro-txt">
+                  Registro
+                </h2>
+              </div>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" formControlName="nombre" required
+                      minlength="4" />
+                    <label class="form-label" for="form3Example1">Nombre</label>
+                  </div>
+                </div>
 
-                    <div class="form-outline ">
-                      <input type="password" id="form3Example4" class="form-control" [(ngModel)]="password2" name="password2"  #passwordInput2="ngModel" required
-                        (blur)="verificarPassword()"/>
-                      <label class="form-label" for="form3Example4">Confirmar password </label>
-                    </div>
-    
-
-    
-                    <!-- Submit button -->
-                    <div class="d-flex justify-content-center">
-                      <button (click)="registrar()" type="submit" class="btn btn-primary btn-block mb-4">
-                        Aceptar
-                      </button>
-                    </div>
-                    <div class="d-flex justify-content-center error" *ngIf="name.invalid && (name.dirty || name.touched) ">
-                      <div *ngIf="name.errors?.['required']">
-                        Por favor ingresar un nombre
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center error" *ngIf="surname.invalid && (surname.dirty || surname.touched) ">
-                      <div *ngIf="surname.errors?.['required']">
-                        Por favor ingresar un apellido
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center error" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched) ">
-                      <div *ngIf="emailInput.errors?.['required']">
-                        Por favor ingresar un email
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center error" *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched) ">
-                      <div *ngIf="passwordInput.errors?.['required']">
-                        Por favor ingresar una contraseña
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center registrado" *ngIf="registroOk">
-                        Usuario registrado
-                    </div>
-
-                    <div class="d-flex justify-content-center error" *ngIf="!registroOk">
-                      {{mensaje}}
-                    </div>
-
-                    <div class="d-flex justify-content-center error" *ngIf="(passwordInput2.invalid && (passwordInput2.dirty || passwordInput2.touched)) && !sonIguales">
-                      Las contraseñas no coinciden
-                    </div>
-
-                  </form>
+                <div class="col-md-6 ">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" formControlName="apellido"
+                      name="apellido" required />
+                    <label class="form-label" for="form3Example2">Apellido</label>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              <!-- Email input -->
+              <div class="form-outline ">
+                <input type="email" id="form3Example3" class="form-control" formControlName="email" name="email"
+                  required />
+                <label class="form-label" for="form3Example3">Email</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline ">
+                <input type="password" id="form3Example4" class="form-control" formControlName="password1"
+                  name="password" required />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>
+
+              <div class="form-outline ">
+                <input type="password" id="form3Example4" class="form-control" formControlName="password2"
+                  name="password2" required />
+                <label class="form-label" for="form3Example4">Confirmar password </label>
+              </div>
+
+              <!-- <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['nombre'].errors">
+                Por favor ingresar un nombre sin espacios
+              </div> -->
+              <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['nombre'].errors?.['required'] 
+              && registroFormulario.controls['nombre'].touched">
+                Por favor ingresar un nombre
+              </div>
+
+              <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['apellido'].errors?.['required'] 
+            && registroFormulario.controls['apellido'].touched">
+                Por favor ingresar un apellido
+              </div>
+
+              <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['email'].errors?.['required'] 
+                && registroFormulario.controls['email'].touched">
+                Por favor ingresar un email
+              </div>
+              <div class="d-flex justify-content-center error"
+                *ngIf="registroFormulario.controls['email'].errors?.['email']">
+                Verificar el formato del email
+              </div>
+
+              <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['password1'].errors?.['required'] 
+            && registroFormulario.controls['password1'].touched">
+                Por favor ingresar una contraseña
+              </div>
+              <div class="d-flex justify-content-center error"
+                *ngIf="registroFormulario.controls['password1'].errors?.['minlength']">
+                La contraseña debe contener 6 caracteres como mínimo
+              </div>
+
+              <!-- <div class="d-flex justify-content-center error" *ngIf="registroFormulario.controls['password2'].touched 
+              && registroFormulario.controls['password2'].errors">
+                Las contraseñas no coinciden
+              </div> -->
+
+
+              <div class="d-flex justify-content-center registrado" *ngIf="registroOk">
+                <h4>Usuario registrado</h4>
+              </div>
+
+              <div class="d-flex justify-content-center error" *ngIf="!registroOk">
+                {{mensaje}}
+              </div>
+
+              <!-- Submit button -->
+              <div class="d-flex justify-content-center">
+                <button [disabled]="registroFormulario.invalid" (click)="registrar()" type="submit"
+                  class="btn btn-primary btn-block mb-4">
+                  Aceptar
+                </button>
+              </div>
+
+            </form>
           </div>
         </div>
       </div>
-      <!-- Jumbotron -->
-  
-    <!-- Section: Design Block -->
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+
+<!-- Section: Design Block -->

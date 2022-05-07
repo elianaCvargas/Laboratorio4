@@ -1,39 +1,45 @@
-.box-login{
-    border-radius: 15px;
-    margin: 25px;
-    height: 88%;
+.box-login {
+    /* border-radius: 15px; */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 84%;
     display: flex;
     align-items: center;
+    background-color: hsla(0, 0%, 96%, 0.778)
 }
 
-.titulo-utn{
-    color:rgb(221, 175, 49);
-    
+.titulo-utn {
+    color: rgb(221, 175, 49);
+    font-size: 60%;
     border-right: thick;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color:rgb(221, 175, 49);
+    background-color: rgb(221, 175, 49);
     border-color: #0aca1a;
 }
 
-button{
+button {
     background-color: #0bd7cd;
 }
-
-/* .hide-error{
-    visibility: hidden;
-}
-
-.show-error{
-    visibility: visible;
-} */
 
 .error {
     color: red;
 }
 
-.registrado{
-    color: #0aca1a;
+.registrado {
+
+    color: #0aad17;
+}
+
+input[type="text"][disabled] {
+    color: rgb(58, 52, 52);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: rgb(58, 52, 52);
+    border-color: rgb(58, 52, 52);
 }

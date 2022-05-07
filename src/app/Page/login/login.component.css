@@ -1,19 +1,22 @@
-.box-login{
-    border-radius: 15px;
-    margin: 25px;
-    height: 88%;
+.box-login {
+    /* border-radius: 15px; */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 84%;
     display: flex;
     align-items: center;
+    background-color: hsla(0, 0%, 96%, 0.778)
 }
 
-.titulo-utn{
-    color:rgb(55, 159, 185);
-    
+.titulo-utn {
+    color: rgb(55, 159, 185);
+    font-size: 60%;
     border-right: thick;
+
 }
 
-button{
-    background-color:rgb(221, 175, 49);
+button {
+    background-color: rgb(221, 175, 49);
 }
 
 .btn-primary:hover {
@@ -22,9 +25,9 @@ button{
     border-color: #0aca1a;
 }
 
-.crea-cuenta{
+.crea-cuenta {
     font-family: cursive;
-    font-style:italic;
+    font-style: italic;
     font-weight: bold;
-    color:rgb(221, 49, 86);
+    color: rgb(221, 49, 86);
 }
