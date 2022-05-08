@@ -1,11 +1,11 @@
 .contenedor {
-    height: 100vh;
-    background-image: url('../assets/imagenes/bross.jpg');
-    background-size:cover;
-  }
+  height: 100vh;
+  background-image: url('../assets/imagenes/bross.jpg');
+  background-size: cover;
+}
 
-.box-login{
-    border-radius: 15px;
-    margin: 25px;
-    height: 88%;
+.box-login {
+  border-radius: 15px;
+  margin: 25px;
+  height: 88%;
 }

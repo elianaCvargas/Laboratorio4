@@ -1,24 +1,25 @@
 <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
             <a routerLink="" class="nav-link active" aria-current="page">Home</a>
           </li> -->
-          <li class="nav-item">
-            <a routerLink="juego" class="nav-link active" aria-current="page" *ngIf="usuario">Home</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="perfil" class="nav-link active">Quién Soy</a>
-          </li>
+        <li class="nav-item">
+          <a routerLink="juego" class="nav-link active" aria-current="page" *ngIf="usuario">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="perfil" class="nav-link active">Quién Soy</a>
+        </li>
 
-        </ul>
-        <form class="d-flex">
-          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="!usuario">Login</a>
-          <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="usuario" (click)="salir()">Salir</a>
-      
-        </form>
-      </div>
+      </ul>
+      <form class="d-flex">
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="!usuario">Login</a>
+        <a routerLink="login" class="nav-link active login" aria-current="page" *ngIf="usuario"
+          (click)="salir()">Salir</a>
+
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>

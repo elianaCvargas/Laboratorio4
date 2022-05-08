@@ -28,6 +28,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { ChatJuegosComponent } from './Page/juegos/chat-juegos/chat-juegos.component';
+import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     FootComponent,
     MenuJuegosComponent,
     RegistroComponent,
+    ChatJuegosComponent,
+    HomeJuegosComponent,
   ],
   imports: [
     BrowserModule,

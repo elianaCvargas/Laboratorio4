@@ -1,17 +1,14 @@
-
-
 .box-juegos {
     min-height: 1px;
-    margin: 5px ;
-    width: 82%;
+    margin: 5px;
+    width: 72%;
     height: 600PX;
     background-color: rgba(240, 248, 255, 0.603);
 
 }
 
-.contenedor-juegos{
+.contenedor-juegos {
     display: flex;
     align-items: center;
     height: 93%;
 }
-

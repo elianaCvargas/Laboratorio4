@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Page/home/home.component';
+import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.component';
 import { JuegosComponent } from './Page/juegos/juegos.component';
 import { MemoTestComponent } from './Page/juegos/memo-test/memo-test.component';
 import { PiedraPapelTijeraComponent } from './Page/juegos/piedra-papel-tijera/piedra-papel-tijera.component';
@@ -16,27 +17,41 @@ import { RegistroComponent } from './Page/registro/registro.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch : 'full'},  //esto redirige a otro path definido segun el  path que le doy
-  { path: 'inicio', loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)},
-  { path: 'practicas', loadChildren: () => import('./modules/practicas/practicas.module').then(m => m.PracticasModule)},
+  { path: 'inicio', loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule) },
+  { path: 'practicas', loadChildren: () => import('./modules/practicas/practicas.module').then(m => m.PracticasModule) },
 
-  { path: '', component: HomeComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'registro', component: RegistroComponent},
-  { path: 'perfil', component: PerfilComponent,
-      children: [
-        { path: '', component: ResumenCarreraComponent },
-        { path: 'resumen-carrera', component: ResumenCarreraComponent },
-        { path: 'resumen-habilidades', component: ResumenHabilidadesComponent },
-        { path: 'experiencia-laboral', component: ExperienciaLaboralComponent },
-        //  { path: 'resumen-carrera', redirectTo: 'resumen-carrera', pathMatch : 'full' },
-      ]},
-  { path: 'juego', component: JuegosComponent, 
-      children: [
-        { path: 'tateti', component: TatetiComponent },
-        { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
-        { path: 'memo-test', component: MemoTestComponent },
-        // { path: '**', component: NotFoundComponent },
-      ]},
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent },
+  {
+    path: 'perfil', component: PerfilComponent,
+    children: [
+      { path: '', component: ResumenCarreraComponent },
+      { path: 'resumen-carrera', component: ResumenCarreraComponent },
+      { path: 'resumen-habilidades', component: ResumenHabilidadesComponent },
+      { path: 'experiencia-laboral', component: ExperienciaLaboralComponent },
+      //  { path: 'resumen-carrera', redirectTo: 'resumen-carrera', pathMatch : 'full' },
+    ]
+  },
+  {
+    path: 'juego', component: JuegosComponent,
+    children: [
+      { path: '', component: HomeJuegosComponent },
+      { path: 'tateti', component: TatetiComponent },
+      { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
+      { path: 'memo-test', component: MemoTestComponent },
+      // { path: '**', component: NotFoundComponent },
+    ]
+  },
+  // {
+  //   path: 'juego', component: JuegosComponent,
+  //   children: [
+  //     { path: 'tateti', component: TatetiComponent },
+  //     { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
+  //     { path: 'memo-test', component: MemoTestComponent },
+  //     // { path: '**', component: NotFoundComponent },
+  //   ]
+  // },
   { path: '**', component: NotFoundComponent },
 
 ];
