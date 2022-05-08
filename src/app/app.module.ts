@@ -30,6 +30,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ChatJuegosComponent } from './Page/juegos/chat-juegos/chat-juegos.component';
 import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.component';
+import { AdivinaNumeroComponent } from './Page/juegos/adivina-numero/adivina-numero.component';
+import { AhorcadoComponent } from './Page/juegos/ahorcado/ahorcado.component';
+import { MayorMenorComponent } from './Page/juegos/mayor-menor/mayor-menor.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.compo
     RegistroComponent,
     ChatJuegosComponent,
     HomeJuegosComponent,
+    AdivinaNumeroComponent,
+    AhorcadoComponent,
+    MayorMenorComponent,
   ],
   imports: [
     BrowserModule,
