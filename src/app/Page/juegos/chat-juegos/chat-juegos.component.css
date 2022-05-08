@@ -1,0 +1,27 @@
+img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.box-menu-juego {
+    background-color: rgba(7, 7, 7, 0.76);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.usuario-nombre {
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+}
+
+
+.row {
+    align-items: center;
+}
+
+
+.menu-item {
+    list-style-type: none;
+}
