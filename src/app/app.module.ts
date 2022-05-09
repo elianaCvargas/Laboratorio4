@@ -33,6 +33,8 @@ import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.compo
 import { AdivinaNumeroComponent } from './Page/juegos/adivina-numero/adivina-numero.component';
 import { AhorcadoComponent } from './Page/juegos/ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './Page/juegos/mayor-menor/mayor-menor.component';
+import { ChatComponent } from './Page/juegos/chat-juegos/chat/chat.component';
+import { ChatListaComponent } from './Page/juegos/chat-juegos/chat-lista/chat-lista.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { MayorMenorComponent } from './Page/juegos/mayor-menor/mayor-menor.compo
     AdivinaNumeroComponent,
     AhorcadoComponent,
     MayorMenorComponent,
+    ChatComponent,
+    ChatListaComponent,
   ],
   imports: [
     BrowserModule,
