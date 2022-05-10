@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MayorMenorComponent implements OnInit {
 
+  imagenDir: string = '';
   constructor() { }
 
   ngOnInit(): void {

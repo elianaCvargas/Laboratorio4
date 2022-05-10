@@ -1,6 +1,15 @@
 <div id="carouselExampleDark" data-component="CarouselControlDesktop">
-    <h3>Chat general</h3>
+    <h4>Chat general</h4>
+    <label for="exampleDataList" class="form-label">Chatear con:</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" [(ngModel)]="jugadorSeleccionado"
+        placeholder="Buscar jugador">
+    <datalist id="datalistOptions">
+        <option *ngFor="let jugador of listaJugadores" [value]="jugador.email">
+    </datalist>
+    <button (click)="abrirChat()" class="">ponerIcono</button>
+    <label>Recientes</label>
     <ul>
+
         <div class="box-menu-juego">
             <li class="menu-item">
                 <div class="row">
@@ -19,90 +28,7 @@
                 </div>
             </li>
         </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh" src="./assets/imagenes-juegos/piedra-slide.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div routerLink="piedra-papel-tijera" class="css-rgqwpc">Piedra Papel Tijera</div>
-                    </div>
-                </div>
-            </li>
-        </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh" src="./assets/imagenes-juegos/anagrama.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div class="css-rgqwpc">Anagrama</div>
-                    </div>
-                </div>
-            </li>
-        </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh" src="./assets/imagenes-juegos/adivinaNumero.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div class="css-rgqwpc">Adivina el número</div>
-                    </div>
-                </div>
-            </li>
-        </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh" src="./assets/imagenes-juegos/memo.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div routerLink="memo-test" class="css-rgqwpc">Memotest</div>
-                    </div>
-                </div>
-            </li>
-        </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh" src="./assets/imagenes-juegos/ahorcado-logo.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div class="css-rgqwpc">Ahorcado</div>
-                    </div>
-                </div>
-            </li>
-        </div>
-        <div class="box-menu-juego" data-component="WithClickTracking">
-            <li class="menu-item" data-component="CarouselControlDesktop">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="css-han5dv">
-                            <img class="css-b4kcmh"
-                                src="./assets/imagenes-juegos/Math-pi-pencil-board-calculation-512.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-9 box-item">
-                        <div class="css-rgqwpc">Agilidad Aritmética</div>
-                    </div>
-                </div>
-            </li>
-        </div>
+
     </ul>
+    <app-chat [usuarioReceptorSelected]="receptor"></app-chat>
 </div>

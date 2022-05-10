@@ -8,21 +8,27 @@ import { Usuario } from 'src/Entidades/tp-juegos/usuario';
 })
 export class UsuarioService {
 
-  message:string;
+  message: string;
   constructor(private firestore: AngularFirestore
-    ,private auth: AngularFireAuth) { }
+    , private auth: AngularFireAuth) { }
 
-    usuarioGet(email:string) {
-      return new Promise<any>((resolve)=> {
-          this.firestore.collection('usuario', ref => ref
-            .where('email', '==', email))
-            .valueChanges().subscribe(users => resolve(users))
-      })
-    }
+  usuarioGet(email: string) {
+    return new Promise<any>((resolve) => {
+      this.firestore.collection('usuario', ref => ref
+        .where('email', '==', email))
+        .valueChanges().subscribe(users => resolve(users))
+    })
+  }
 
-    guardarUsuario(usuario: Usuario)
-    {
-      return this.firestore.collection('usuario').add({ ...usuario });
-    }
-  
+  usuariosGetAll() {
+    return new Promise<any>((resolve) => {
+      this.firestore.collection('usuario', ref => ref)
+        .valueChanges().subscribe(users => resolve(users))
+    })
+  }
+
+  guardarUsuario(usuario: Usuario) {
+    return this.firestore.collection('usuario').add({ ...usuario });
+  }
+
 }

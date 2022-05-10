@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Page/home/home.component';
 import { AhorcadoComponent } from './Page/juegos/ahorcado/ahorcado.component';
+import { ChatListaComponent } from './Page/juegos/chat-juegos/chat-lista/chat-lista.component';
+import { ChatComponent } from './Page/juegos/chat-juegos/chat/chat.component';
 import { HomeJuegosComponent } from './Page/juegos/home-juegos/home-juegos.component';
 import { JuegosComponent } from './Page/juegos/juegos.component';
 import { MayorMenorComponent } from './Page/juegos/mayor-menor/mayor-menor.component';
@@ -45,6 +47,8 @@ const routes: Routes = [
       { path: 'tateti', component: TatetiComponent },
       { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
       { path: 'memo-test', component: MemoTestComponent },
+      // { path: 'chat', component: ChatComponent },
+      // { path: 'chat-lista', component: ChatListaComponent },
       // { path: '**', component: NotFoundComponent },
     ]
   },

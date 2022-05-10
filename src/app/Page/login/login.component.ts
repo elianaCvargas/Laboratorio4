@@ -25,8 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   loggear() {
-    var usuario = new Usuario();
-
     this.login.fecha = new Date().toLocaleDateString();
 
     this.loginService.login(this.email, this.password).then(data => {
