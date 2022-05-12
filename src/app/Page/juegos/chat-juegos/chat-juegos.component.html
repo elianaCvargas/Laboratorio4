@@ -6,29 +6,11 @@
     <datalist id="datalistOptions">
         <option *ngFor="let jugador of listaJugadores" [value]="jugador.email">
     </datalist>
-    <button (click)="abrirChat()" class="">ponerIcono</button>
+    <button (click)="abrirChat()" class="">send</button>
     <label>Recientes</label>
     <ul>
-
-        <div class="box-menu-juego">
-            <li class="menu-item">
-                <div class="row">
-                    <div class="col-sm-3 imagen-usuario">
-                        <img src="../../../../assets/imagenes/img_avatar2.png">
-                    </div>
-                    <div class="col-sm-7">
-                        <div routerLink="chat-detalle" class="usuario-nombre">Usuario Prueba</div>
-                    </div>
-                    <div class="col-sm-2">
-                        <span class="position-absolute translate-middle badge rounded-pill bg-danger">
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
-                    </div>
-                </div>
-            </li>
-        </div>
-
+        <app-chat-lista [listaChat]="chatsRecientes" (onSelectedUsuario)="usuarioSelected($event);"></app-chat-lista>
     </ul>
-    <app-chat [usuarioReceptorSelected]="receptor"></app-chat>
+    <app-chat [usuarioReceptorSelected]="receptor" [existeChat]="existeChatAbierto"
+        (onChatNuevoGenerado)="actualizarListaYExisteChat()"></app-chat>
 </div>

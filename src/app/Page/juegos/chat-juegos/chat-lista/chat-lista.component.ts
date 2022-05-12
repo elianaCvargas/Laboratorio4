@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatRoom } from 'src/Entidades/tp-juegos/chatRoom';
+import { Usuario } from 'src/Entidades/tp-juegos/usuario';
 
 @Component({
   selector: 'app-chat-lista',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-lista.component.css']
 })
 export class ChatListaComponent implements OnInit {
-
-  constructor() { }
+  @Input() listaChat: ChatRoom[];
+  @Output() onSelectedUsuario: EventEmitter<any>;
+  constructor() {
+    this.onSelectedUsuario = new EventEmitter<any>();
+  }
 
   ngOnInit(): void {
+  }
+
+  enviarUsuarioSeleccionado(chat: ChatRoom) {
+    //abrir chat
+    this.onSelectedUsuario.emit({ existeChat: true, partner: chat });
   }
 
 }
